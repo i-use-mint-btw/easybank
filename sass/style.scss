@@ -1,4 +1,84 @@
 @import "./Fonts/fonts";
 @import "./Global/Globals";
 @import "./variables/variables";
-@import "./Pages/index";
+
+
+nav {
+
+   ul {
+      display: flex;
+   }
+
+   li {
+      list-style: none;
+      margin-left: 2rem;
+   }
+
+   a {
+      color: $Grayish-Blue;
+      text-decoration: none;
+      font-weight: 600;
+   }
+
+}
+
+.request-cta {
+   background: linear-gradient(90deg, $Lime-Green, $Bright-Cyan);
+   color: white;
+   padding: 1em 3em;
+   border: none;
+   border-radius: 40px;
+   font-weight: 700;
+   font-size: 1.03rem;
+}
+
+.hero-section {
+   display: grid;
+   grid-template-columns: 1fr 2fr;
+   
+   .hero-text {
+      max-width: 700px;
+      padding: 10em 0 0 4em;
+
+      h1 {
+         font-size: 2.5rem;
+         max-width: 300px;
+      }
+   }
+
+   .hero-image {
+      position: relative;
+      height: 115vh;
+      overflow: hidden;
+      
+      
+      .background-image-1 {
+         height: 900px;
+         width: 1000px;
+         position: absolute;
+         right: -25%;
+         top: -31%;
+         z-index: -1;
+      }
+
+      .background-image-2 {
+         height: 1000px;
+         width: 800px;
+         position: absolute;
+         top: -17%;
+         right: -13.5%;
+      }
+   }
+}
+
+.business-characteristics {
+   
+
+   h2 {
+      font-size: 1.7rem;
+   }
+
+   p {
+      max-width: 700px;
+   }
+}

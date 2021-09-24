@@ -1,3 +1,5 @@
+@import "../Variables/variables";
+
 *, *::after, *::before {
    margin: 0;
    padding: 0;
@@ -8,4 +10,25 @@ body {
    font-size: 1.05rem;
    font-family: "Public Sans", sans-serif;
    font-weight: 300;
+}
+
+header {
+   background: white;
+   padding: 1rem 5rem;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   position: sticky;
+   top: 0;
+   z-index: 10;
+}
+
+h1, h2, h3 {
+   color: $Dark-Blue;
+   font-weight: 300;
+}
+
+p {
+   color: $Grayish-Blue;
+   font-size: 1.125rem;
 }
