@@ -1,1 +1,13 @@
-/* No CSS *//*# sourceMappingURL=style.css.map */
+@import url("https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700&display=swap");
+*, *::after, *::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 1.05rem;
+  font-family: "Public Sans", sans-serif;
+  font-weight: 300;
+}
+/*# sourceMappingURL=style.css.map */
