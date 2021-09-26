@@ -22,6 +22,10 @@ header {
   z-index: 10;
 }
 
+header .logo {
+  cursor: pointer;
+}
+
 h1, h2, h3 {
   color: #2d314d;
   font-weight: 300;
@@ -47,6 +51,20 @@ nav a {
   font-weight: 600;
 }
 
+nav a:focus {
+  color: inherit;
+  border-bottom: 2px solid;
+}
+
+nav a:focus:hover {
+  color: initial;
+  cursor: default;
+}
+
+nav a:hover {
+  color: #2bb7da;
+}
+
 .request-cta {
   background: linear-gradient(90deg, #31d35c, #2bb7da);
   color: white;
@@ -55,16 +73,23 @@ nav a {
   border-radius: 40px;
   font-weight: 700;
   font-size: 1.03rem;
+  cursor: pointer;
+}
+
+.request-cta:active {
+  opacity: .9;
+  transform: scale(0.97);
 }
 
 .hero-section {
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 1fr 1.5fr;
+  max-height: 1200px;
 }
 
 .hero-section .hero-text {
-  max-width: 700px;
-  padding: 10em 0 0 4em;
+  max-width: 600px;
+  padding: 10em 0 0 6em;
 }
 
 .hero-section .hero-text h1 {
@@ -92,7 +117,7 @@ nav a {
   width: 800px;
   position: absolute;
   top: -17%;
-  right: -13.5%;
+  right: -15%;
 }
 
 .business-characteristics h2 {
