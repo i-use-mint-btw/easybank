@@ -63,6 +63,10 @@ header nav a:hover {
   padding-bottom: 1.8rem;
 }
 
+header .mobile-navigation {
+  display: none;
+}
+
 h1, h2, h3 {
   color: #2d314d;
   font-weight: 300;
@@ -136,8 +140,9 @@ p {
 }
 
 #business-description {
-  margin: 0 0 6rem 5vw;
+  margin-bottom: 6rem;
   max-width: 640px;
+  grid-column: 1 / -1;
 }
 
 #business-description h2 {
@@ -146,9 +151,15 @@ p {
 }
 
 .card-info {
-  margin: 0 6vw 15rem 5vw;
+  margin-bottom: 15rem;
+  background-color: #ebebeb;
+  padding: 5rem 0;
+}
+
+.card-info > div {
+  margin: 0 6vw 0 5vw;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 1.7rem;
 }
 
@@ -166,7 +177,7 @@ p {
 .blog-section {
   display: grid;
   margin: 0 6vw 13rem 5vw;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
   gap: 2.2rem;
 }
 
@@ -177,7 +188,7 @@ p {
 
 .blog-section article img {
   width: 100%;
-  height: 240px;
+  height: 250px;
 }
 
 .blog-section article .blog-author {
@@ -226,9 +237,81 @@ footer .footer-cta p {
   font-size: 1rem;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 1000px) {
+  p {
+    line-height: 1.8rem;
+  }
   body {
-    background: red;
+    text-align: center;
+  }
+  body * {
+    margin: 0 auto;
+  }
+  header * {
+    margin: 0;
+  }
+  header nav, header .request-cta {
+    display: none;
+  }
+  header .mobile-navigation {
+    display: initial;
+    width: 27px;
+    height: 18px;
+  }
+  header .mobile-navigation img {
+    width: 100%;
+    height: 100%;
+  }
+  .hero-section {
+    display: flex;
+    flex-direction: column;
+  }
+  .hero-section .background-image {
+    order: 1;
+    width: 100%;
+  }
+  .hero-section .background-image #bg-image {
+    position: relative;
+    width: 170%;
+    transform: translate(-20vw, -45vh);
+  }
+  .hero-section .background-image #phone-image {
+    width: 90vw;
+    position: absolute;
+    top: -20vh;
+    right: 5vw;
+    left: 5vw;
+  }
+  .hero-section .hero-text {
+    order: 2;
+    margin: -23rem auto 4rem auto;
+  }
+  .hero-section .hero-text div {
+    width: 90%;
+  }
+  #business-description {
+    width: 90%;
+    margin: 0 auto 6rem auto;
+    text-align: center;
+  }
+  article {
+    margin-bottom: 4rem;
+  }
+  footer {
+    padding: 2rem 0;
+    flex-direction: column;
+  }
+  footer .logo {
+    margin-bottom: 2rem;
+  }
+  footer .social-media-icon {
+    margin-bottom: 1.3rem;
+  }
+  footer a {
+    margin: 0 0 1.5rem 0;
+  }
+  footer .footer-cta {
+    text-align: center;
   }
 }
 /*# sourceMappingURL=style.css.map */
